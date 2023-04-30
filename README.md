@@ -12,6 +12,7 @@
 
 #### Assets
 - https://www.gameart2d.com/
+- https://craftpix.net/freebies/filter/game-backgrounds/
 
 #### Fonts
 - https://www.dafont.com/
