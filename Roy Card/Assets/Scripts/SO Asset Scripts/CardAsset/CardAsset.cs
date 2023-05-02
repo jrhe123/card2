@@ -66,6 +66,8 @@ public enum CaptainSkills
 
 public class CardAsset : ScriptableObject, IComparable<CardAsset>
 {
+    public string GUID;
+
     [Header("General info")]
     public CharacterAsset CharacterAsset;
 
@@ -406,6 +408,9 @@ public class CardAsset : ScriptableObject, IComparable<CardAsset>
         int AccumulativeExperience
     )
     {
+        Guid uuid = new Guid();
+        this.GUID = uuid.ToString();
+
         int level;
         int experienceRequiredNextLevel;
         // level 1-10 (each level cost 1000)
