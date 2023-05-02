@@ -16,6 +16,7 @@ public class CardAssetCustomInspector : Editor
     IsCaptain_prop,
 
     Level_prop,
+    AccumulativeExperience_prop,
     ExperienceRequiredNextLevel_prop,
     EvolutionLevel_prop,
     EvoluationCondition_prop,
@@ -55,6 +56,7 @@ public class CardAssetCustomInspector : Editor
 
         // all the creature fields:
         Level_prop = serializedObject.FindProperty("Level");
+        AccumulativeExperience_prop = serializedObject.FindProperty("AccumulativeExperience");
         ExperienceRequiredNextLevel_prop = serializedObject.FindProperty("ExperienceRequiredNextLevel");
         EvolutionLevel_prop = serializedObject.FindProperty("EvolutionLevel");
         EvoluationCondition_prop = serializedObject.FindProperty("EvoluationCondition");
@@ -102,6 +104,7 @@ public class CardAssetCustomInspector : Editor
                 EditorGUILayout.PropertyField(IsCaptain_prop);
 
                 EditorGUILayout.PropertyField(Level_prop);
+                EditorGUILayout.PropertyField(AccumulativeExperience_prop);
                 EditorGUILayout.PropertyField(ExperienceRequiredNextLevel_prop);
                 EditorGUILayout.PropertyField(EvolutionLevel_prop);
                 EditorGUILayout.PropertyField(EvoluationCondition_prop);

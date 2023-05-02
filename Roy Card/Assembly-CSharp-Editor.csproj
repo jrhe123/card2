@@ -60,13 +60,6 @@
     <Compile Include="Assets/Scripts/SO Asset Scripts/Editor/ScriptableObjectUtility2.cs" />
     <Compile Include="Assets/Scripts/SO Asset Scripts/CardAsset/Editor/CardUnityIntegration.cs" />
     <Compile Include="Assets/Scripts/SO Asset Scripts/CardAsset/Editor/CardAssetCustomInspector.cs" />
-    <Compile Include="Assets\Scripts\Logic\ExperienceScripts\ExperienceEffect.cs" />
-    <Compile Include="Assets\Scripts\Logic\Interfaces.cs" />
-    <Compile Include="Assets\Scripts\Logic\ExperienceScripts\DrawACard.cs" />
-    <Compile Include="Assets\Scripts\Logic\CreatureLogic.cs" />
-    <Compile Include="Assets\Scripts\Logic\IDFactory.cs" />
-    <Compile Include="Assets\Scripts\Logic\CreatureScripts\CreatureEffect.cs" />
-    <Compile Include="Assets\Scripts\Logic\CreatureScripts\NewClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
