@@ -66,6 +66,7 @@
     <Compile Include="Assets/Scripts/Logic/ExperienceScripts/DrawACard.cs" />
     <Compile Include="Assets/Scripts/Logic/CreatureScripts/CreatureEffect.cs" />
     <Compile Include="Assets/Scripts/Menu/CardCollection.cs" />
+    <Compile Include="Assets/Scripts/SO Asset Scripts/SafeAreaPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
