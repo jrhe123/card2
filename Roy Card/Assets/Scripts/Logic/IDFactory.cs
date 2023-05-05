@@ -18,6 +18,4 @@ public static class IDFactory
     {
         Count = 0;
     }
-
-
 }

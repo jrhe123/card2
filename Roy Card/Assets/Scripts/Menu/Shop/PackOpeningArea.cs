@@ -35,6 +35,7 @@ public class PackOpeningArea : MonoBehaviour
 
     public Dictionary<RarityOptions, Color32> GlowColorsByRarity =
         new Dictionary<RarityOptions, Color32>();
+
     //
     public bool giveAtLeastOneRare = false;
 
@@ -96,6 +97,7 @@ public class PackOpeningArea : MonoBehaviour
         // Allow To Drag Another Pack Only After DoneButton Is pressed
         // 1) Determine rarity of all cards
         RarityOptions[] rarities = new RarityOptions[SlotsForCards.Length];
+
         bool AtLeastOneRareGiven = false;
         for (int i = 0; i < rarities.Length; i++)
         {
@@ -136,8 +138,11 @@ public class PackOpeningArea : MonoBehaviour
 
     private GameObject CardFromPack(RarityOptions rarity)
     {
-        List<CardAsset> CardsOfThisRarity = CardCollection.Instance.GetCardsWithRarity(rarity);
-        CardAsset a = CardsOfThisRarity[Random.Range(0, CardsOfThisRarity.Count)];
+        List<CardAsset> CardsOfThisRarity =
+            CardCollection.Instance.GetCardsWithRarity(rarity);
+        CardAsset a = CardsOfThisRarity[
+            Random.Range(0, CardsOfThisRarity.Count)
+            ];
 
         // add this card to your collection.
         a.AccumulativeExperience = 500;

@@ -38,10 +38,7 @@ public class ShopManager : MonoBehaviour
             Debug.Log("UnopenedPacks: " + PlayerPrefs.GetInt("UnopenedPacks"));
             StartCoroutine(GivePacks(PlayerPrefs.GetInt("UnopenedPacks"), true));
         }
-
-
         LoadDustAndMoneyToPlayerPrefs();
-
     }
 
     private int money;
@@ -94,7 +91,6 @@ public class ShopManager : MonoBehaviour
                 newPack.transform.DOLocalMove(localPositionForNewPack, 0.5f);
                 yield return new WaitForSeconds(0.5f);
             }
-
         }
         yield break;
     }
@@ -102,7 +98,6 @@ public class ShopManager : MonoBehaviour
     void OnApplicationQuit()
     {
         SaveDustAndMoneyToPlayerPrefs();
-
         PlayerPrefs.SetInt("UnopenedPacks", PacksCreated);
     }
 
@@ -136,5 +131,4 @@ public class ShopManager : MonoBehaviour
         ScreenContent.SetActive(false);
         MoneyHUD.SetActive(false);
     }
-
 }

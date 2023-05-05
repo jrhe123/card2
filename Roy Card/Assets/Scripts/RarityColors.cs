@@ -12,7 +12,8 @@ public class RarityColorData
 public class RarityColors : MonoBehaviour
 {
     public RarityColorData[] Data;
-    public Dictionary<RarityOptions, Color32> ColorsDictionary = new Dictionary<RarityOptions, Color32>();
+    public Dictionary<RarityOptions, Color32> ColorsDictionary =
+        new Dictionary<RarityOptions, Color32>();
 
     public static RarityColors Instance;
 
@@ -20,6 +21,7 @@ public class RarityColors : MonoBehaviour
     {
         if (Instance != this && Instance != null)
             Destroy(Instance.gameObject);
+
         Instance = this;
 
         DontDestroyOnLoad(this);

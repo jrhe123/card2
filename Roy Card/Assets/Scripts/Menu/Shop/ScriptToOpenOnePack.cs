@@ -11,6 +11,7 @@ public class ScriptToOpenOnePack : MonoBehaviour
 
     public Image GlowImage;
     public Color32 GlowColor;
+
     private bool allowedToOpen = false;
     private Collider col;
 
@@ -23,7 +24,8 @@ public class ScriptToOpenOnePack : MonoBehaviour
     {
         allowedToOpen = true;
         ShopManager.Instance.OpeningArea.AllowedToDragAPack = false;
-        // Disable back button so that player can not exit the pack opening screen while he has not opened a pack
+        // Disable back button so that player can not exit the pack opening screen
+        // while he has not opened a pack
         ShopManager.Instance.OpeningArea.BackButton.interactable = false;
         if (CursorOverPack())
             GlowImage.DOColor(GlowColor, 0.5f);
@@ -72,8 +74,7 @@ public class ScriptToOpenOnePack : MonoBehaviour
             s.OnComplete(() =>
             {
                 // 2) add glow, particle system
-
-                // 3): 
+                // 3)
                 ShopManager.Instance.OpeningArea.ShowPackOpening(transform.position);
                 if (ShopManager.Instance.PacksCreated > 0)
                     ShopManager.Instance.PacksCreated--;

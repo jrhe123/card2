@@ -8,12 +8,14 @@ public class OneCardManager : MonoBehaviour
 
     public CardAsset cardAsset;
     public OneCardManager PreviewManager;
+
     [Header("Text Component References")]
     public Text NameText;
     public Text ManaCostText;
     public Text DescriptionText;
     public Text HealthText;
     public Text AttackText;
+
     [Header("Image References")]
     public Image CardTopRibbonImage;
     public Image CardLowRibbonImage;
@@ -57,8 +59,8 @@ public class OneCardManager : MonoBehaviour
         }
         else
         {
-            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
             CardFaceFrameImage.color = Color.white;
+            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
             //CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
             //CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
         }
