@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEditor.VersionControl;
 
 public class CardCollection : MonoBehaviour
 {
@@ -112,8 +113,24 @@ public class CardCollection : MonoBehaviour
         return result;
     }
 
+    // Draw new cards
+    // return card assets list by rarity
+    public List<CardAsset> GetCardsWithRarity(RarityOptions rarity)
+    {
+        return GetCards(
+            false,
+            rarity,
+            TypesOfCards.Creature,
+            ""
+            );
+    }
+
+
     // search in all card assets
     public List<CardAsset> GetCards(
+        bool includeAllTypes,
+        RarityOptions rarity = RarityOptions.Basic,
+        TypesOfCards typeOfCard = TypesOfCards.Creature,
         string keyword = ""
         )
     {
@@ -132,6 +149,18 @@ public class CardCollection : MonoBehaviour
                     )
                 )
             );
+        }
+
+        // Basic, Common, Rare, Epic, Legendary,
+        if (rarity != RarityOptions.Basic)
+        {
+            cards = cards.Where(card => card.Rarity == rarity);
+        }
+
+        // Creature, Experience, Weapon
+        if (!includeAllTypes)
+        {
+            cards = cards.Where(card => card.TypeOfCard == typeOfCard);
         }
 
         var returnList = cards.ToList<CardAsset>();
