@@ -93,6 +93,7 @@ public class ShopManager : MonoBehaviour
                 Random.Range(-PosYRange, PosYRange),
                 PacksCreated * packPlacementOffset // offset
                 );
+
             newPack.transform.localEulerAngles = new Vector3(
                 0f,
                 0f,
