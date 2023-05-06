@@ -9,12 +9,14 @@ public class ShopManager : MonoBehaviour
 
     public GameObject ScreenContent;
     public GameObject PackPrefab;
+
     public int PackPrice;
     public Transform PacksParent;
     public Transform InitialPackSpot;
     public float PosXRange = 4f;
     public float PosYRange = 8f;
     public float RotationRange = 10f;
+
     public Text MoneyText;
     public Text DustText;
     public GameObject MoneyHUD;
@@ -25,7 +27,9 @@ public class ShopManager : MonoBehaviour
     public int StartingAmountOfMoney = 1000;
 
     public static ShopManager Instance;
+
     public int PacksCreated { get; set; }
+
     private float packPlacementOffset = -0.01f;
 
     void Awake()
@@ -36,8 +40,12 @@ public class ShopManager : MonoBehaviour
         if (PlayerPrefs.HasKey("UnopenedPacks"))
         {
             Debug.Log("UnopenedPacks: " + PlayerPrefs.GetInt("UnopenedPacks"));
-            StartCoroutine(GivePacks(PlayerPrefs.GetInt("UnopenedPacks"), true));
+            StartCoroutine(
+                GivePacks(PlayerPrefs.GetInt("UnopenedPacks"), true)
+                );
         }
+
+        // load dust & moeny from player pref
         LoadDustAndMoneyToPlayerPrefs();
     }
 
@@ -68,6 +76,8 @@ public class ShopManager : MonoBehaviour
         if (money >= PackPrice)
         {
             Money -= PackPrice;
+
+            // not instant, animation
             StartCoroutine(GivePacks(1));
         }
     }
@@ -77,18 +87,32 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < NumberOfPacks; i++)
         {
             GameObject newPack = Instantiate(PackPrefab, PacksParent);
-            Vector3 localPositionForNewPack = new Vector3(Random.Range(-PosXRange, PosXRange), Random.Range(-PosYRange, PosYRange), PacksCreated * packPlacementOffset);
-            newPack.transform.localEulerAngles = new Vector3(0f, 0f, Random.Range(-RotationRange, RotationRange));
+            // random position for new pack
+            Vector3 localPositionForNewPack = new Vector3(
+                Random.Range(-PosXRange, PosXRange),
+                Random.Range(-PosYRange, PosYRange),
+                PacksCreated * packPlacementOffset // offset
+                );
+            newPack.transform.localEulerAngles = new Vector3(
+                0f,
+                0f,
+                Random.Range(-RotationRange, RotationRange)
+                );
+
+            //
             PacksCreated++;
 
             // make this pack appear on top of all the previous packs using PacksCreated;
             newPack.GetComponentInChildren<Canvas>().sortingOrder = PacksCreated;
+
+            //
             if (instant)
                 newPack.transform.localPosition = localPositionForNewPack;
             else
             {
                 newPack.transform.position = InitialPackSpot.position;
                 newPack.transform.DOLocalMove(localPositionForNewPack, 0.5f);
+                //
                 yield return new WaitForSeconds(0.5f);
             }
         }
