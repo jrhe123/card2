@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
-using TMPro;
 
 public class GlobalSettings : MonoBehaviour
 {

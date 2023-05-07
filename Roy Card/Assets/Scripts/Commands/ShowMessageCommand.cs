@@ -2,7 +2,6 @@
 using System.Collections;
 using System;
 using DG.Tweening;
-using static PlasticPipe.PlasticProtocol.Messages.NegotiationCommand;
 
 public class ShowMessageCommand : Command
 {

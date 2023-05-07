@@ -114,8 +114,8 @@ public class HandVisual : MonoBehaviour
             {
                 card = GameObject.Instantiate(GlobalSettings.Instance.TargetedSpellCardPrefab, position, Quaternion.Euler(eulerAngles)) as GameObject;
                 // pass targeting options to DraggingActions
-                DragSpellOnTarget dragSpell = card.GetComponentInChildren<DragSpellOnTarget>();
-                dragSpell.Targets = c.Targets;
+                //DragSpellOnTarget dragSpell = card.GetComponentInChildren<DragSpellOnTarget>();
+                //dragSpell.Targets = c.Targets;
             }
         }
 

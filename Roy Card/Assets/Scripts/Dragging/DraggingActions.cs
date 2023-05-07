@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using NUnit.Framework;
 
 public abstract class DraggingActions : MonoBehaviour
 {
