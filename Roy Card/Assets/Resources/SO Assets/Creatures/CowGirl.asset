@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ca0920ccf054bce9ce2ae2c55132f6, type: 3}
+  m_Name: CowGirl
+  m_EditorClassIdentifier: 
+  GUID: 
+  CharacterAsset: {fileID: 11400000, guid: 80a38eb56c5d843949719a931231eb7d, type: 2}
+  Description: cow girl desc
+  Tags: cow girl
+  CardImage: {fileID: 21300000, guid: 8a2d06951b4f2428098e485f9c3c60c3, type: 3}
+  CaptainSkill: 0
+  IsCaptain: 0
+  Level: 1
+  AccumulativeExperience: 500
+  ExperienceRequiredNextLevel: 1000
+  EvolutionLevel: 30
+  EvoluationCondition: 0
+  EvolutedCardAsset: {fileID: 11400000, guid: 56301e5ce1574466f878cb2d17813048, type: 2}
+  HitPercentage: 1
+  DodgePercentage: 0.01
+  MaxHealth: 100
+  Attack: 2
+  Defense: 1
+  AttackType: 0
+  DefenseType: 0
+  AttacksForOneTurn: 1
+  NumberOfTargeting: 1
+  CreatureScriptName: 
+  ExperienceScriptName: 
+  WeaponScriptName: 
+  TypeOfCard: 0
+  Rarity: 0
+  Targets: 2

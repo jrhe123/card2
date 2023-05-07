@@ -11,14 +11,14 @@ public class OneCardManager : MonoBehaviour
 
     [Header("Text Component References")]
     public Text NameText;
-    public Text ManaCostText;
+    //public Text ManaCostText;
     public Text DescriptionText;
     public Text HealthText;
     public Text AttackText;
 
     [Header("Image References")]
-    public Image CardTopRibbonImage;
-    public Image CardLowRibbonImage;
+    //public Image CardTopRibbonImage;
+    //public Image CardLowRibbonImage;
     public Image CardGraphicImage;
     public Image CardBodyImage;
     public Image CardFaceFrameImage;
@@ -83,7 +83,8 @@ public class OneCardManager : MonoBehaviour
         if (PreviewManager != null)
         {
             // this is a card and not a preview
-            // Preview GameObject will have OneCardManager as well, but PreviewManager should be null there
+            // Preview GameObject will have OneCardManager as well,
+            // but PreviewManager should be null there
             PreviewManager.cardAsset = cardAsset;
             PreviewManager.ReadCardFromAsset();
         }

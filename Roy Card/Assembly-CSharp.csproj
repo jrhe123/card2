@@ -110,6 +110,14 @@
     <Compile Include="Assets/Scripts/Logic/CreatureScripts/CreatureEffect.cs" />
     <Compile Include="Assets/Scripts/Visual/PlayerArea.cs" />
     <Compile Include="Assets/Scripts/SO Asset Scripts/CharacterAsset/CharacterAsset.cs" />
+    <Compile Include="Assets/Scripts/Dragging/DragSpellOnTarget.cs" />
+    <Compile Include="Assets/Scripts/Target Line/CurvedLine_2016_03_11/CurvedLine/CurvedLinePoint.cs" />
+    <Compile Include="Assets/Scripts/Target Line/CurvedLine_2016_03_11/CurvedLine/LineSmoother.cs" />
+    <Compile Include="Assets/Scripts/Menu/TurnOverCardFromPack.cs" />
+    <Compile Include="Assets/Scripts/Dragging/DragCreatureOnTable.cs" />
+    <Compile Include="Assets/Scripts/Dragging/DragSpellNoTarget.cs" />
+    <Compile Include="Assets/Scripts/Visual/BetterCardRotation.cs" />
+    <Compile Include="Assets/Scripts/Target Line/CurvedLine_2016_03_11/CurvedLine/CurvedLineRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

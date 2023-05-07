@@ -60,6 +60,14 @@
     <Compile Include="Assets/Scripts/SO Asset Scripts/CharacterAsset/Editor/CharacterUnityIntegration.cs" />
     <Compile Include="Assets/Scripts/SO Asset Scripts/Editor/ScriptableObjectUtility2.cs" />
     <Compile Include="Assets/Scripts/SO Asset Scripts/CardAsset/Editor/CardUnityIntegration.cs" />
+    <Compile Include="Assets\Scripts\Visual\BetterCardRotation.cs" />
+    <Compile Include="Assets\Scripts\Dragging\DragCreatureOnTable.cs" />
+    <Compile Include="Assets\Scripts\Dragging\DragSpellNoTarget.cs" />
+    <Compile Include="Assets\Scripts\Dragging\DragSpellOnTarget.cs" />
+    <Compile Include="Assets\Scripts\Target Line\CurvedLine_2016_03_11\CurvedLine\CurvedLinePoint.cs" />
+    <Compile Include="Assets\Scripts\Target Line\CurvedLine_2016_03_11\CurvedLine\CurvedLineRenderer.cs" />
+    <Compile Include="Assets\Scripts\Target Line\CurvedLine_2016_03_11\CurvedLine\LineSmoother.cs" />
+    <Compile Include="Assets\Scripts\Menu\NewClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
