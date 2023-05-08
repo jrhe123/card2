@@ -76,7 +76,6 @@ public class ShopManager : MonoBehaviour
         if (money >= PackPrice)
         {
             Money -= PackPrice;
-
             // not instant, animation
             StartCoroutine(GivePacks(1));
         }
@@ -87,13 +86,13 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < NumberOfPacks; i++)
         {
             GameObject newPack = Instantiate(PackPrefab, PacksParent);
+
             // random position for new pack
             Vector3 localPositionForNewPack = new Vector3(
                 Random.Range(-PosXRange, PosXRange),
-                Random.Range(-PosYRange, PosYRange),
+                Random.Range(-PosYRange, PosYRange) + 3,
                 PacksCreated * packPlacementOffset // offset
-                );
-
+                );            
             newPack.transform.localEulerAngles = new Vector3(
                 0f,
                 0f,
