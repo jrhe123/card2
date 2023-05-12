@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 6847109713579573846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.1913013, y: -1.8892747, z: -0.10010165}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6847109713590378900}
@@ -311,7 +311,7 @@ RectTransform:
   m_GameObject: {fileID: 6847109713590378901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.10010165}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.005, y: 0.005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6847109713995679024}
@@ -321,7 +321,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 240, y: 300}
+  m_SizeDelta: {x: 240, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6847109713590378905
 Canvas:
@@ -342,7 +342,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!114 &6847109713590378906
 MonoBehaviour:
@@ -419,7 +419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.5074, y: -31.3368}
+  m_AnchoredPosition: {x: 42.507446, y: -31.3368}
   m_SizeDelta: {x: 85.0147, y: 62.6732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6847109713947013112
@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00009918213, y: 0.37039948}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0.37036133}
   m_SizeDelta: {x: 29.9236, y: 22.2776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6847109714475261023

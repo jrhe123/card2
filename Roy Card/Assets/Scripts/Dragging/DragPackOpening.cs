@@ -21,6 +21,9 @@ public class DragPackOpening : DraggingActions
 
     public override void OnStartDrag()
     {
+
+        Debug.Log("$$$$ on start drag position: " + transform.localPosition);
+
         savedPosition = transform.localPosition;
         ShopManager.Instance.OpeningArea.AllowedToDragAPack = false;
     }
@@ -34,10 +37,16 @@ public class DragPackOpening : DraggingActions
     {
         // 1) Check if we are holding a card over the table
         if (DragSuccessful())
-        {
-            // snap the pack to the center of the pack opening area
+        {            
+            // move the pack to the center of the pack opening area
+            Vector3 targetPosition = ShopManager.Instance.OpeningArea.transform.position;
+            targetPosition.y -= 3;
+
+            Debug.Log("$$$$ on success drag target position: " +
+                targetPosition);
+
             transform.DOMove(
-                ShopManager.Instance.OpeningArea.transform.position, 0.5f
+                targetPosition, 0.5f
                 )
                 .OnComplete(() =>
             {

@@ -39,9 +39,17 @@ public class ShopManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey("UnopenedPacks"))
         {
-            Debug.Log("UnopenedPacks: " + PlayerPrefs.GetInt("UnopenedPacks"));
+            int unOpenedPacks = PlayerPrefs.GetInt("UnopenedPacks");
+
+            // todo: b/c of the hide screen, StartCoroutine failed
+            Debug.Log("!!!!!!!");
+            Debug.Log("!!!!!!!");
+            Debug.Log("!!!!!!!");
+            Debug.Log("!!!!!!!");
+            Debug.Log("!!!!!!!: " + unOpenedPacks);
+
             StartCoroutine(
-                GivePacks(PlayerPrefs.GetInt("UnopenedPacks"), true)
+                GivePacks(unOpenedPacks, true)
                 );
         }
 
@@ -75,7 +83,7 @@ public class ShopManager : MonoBehaviour
     {
         if (money >= PackPrice)
         {
-            Money -= PackPrice;
+            //Money -= PackPrice;
             // not instant, animation
             StartCoroutine(GivePacks(1));
         }
@@ -90,9 +98,12 @@ public class ShopManager : MonoBehaviour
             // random position for new pack
             Vector3 localPositionForNewPack = new Vector3(
                 Random.Range(-PosXRange, PosXRange),
-                Random.Range(-PosYRange, PosYRange) + 3,
+                Random.Range(-PosYRange, PosYRange) + 2,
                 PacksCreated * packPlacementOffset // offset
-                );            
+                );
+
+            Debug.Log("localPositionForNewPack: " + localPositionForNewPack);
+           
             newPack.transform.localEulerAngles = new Vector3(
                 0f,
                 0f,
