@@ -127,6 +127,7 @@ public class PackOpeningArea : MonoBehaviour
             rarities[Random.Range(0, rarities.Length)] = RarityOptions.Rare;
         }
 
+        // create cards (CreatureFromDeck prefab)
         for (int i = 0; i < rarities.Length; i++)
         {
             GameObject card = CardFromPack(rarities[i]);
@@ -159,6 +160,7 @@ public class PackOpeningArea : MonoBehaviour
         else
             card = Instantiate(CreatureCardFromPackPrefab) as GameObject;
 
+        // rotate card 180 deg, means show card back to user
         card.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         OneCardManager manager = card.GetComponent<OneCardManager>();
         manager.cardAsset = a;

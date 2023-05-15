@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{9B0F9D32-059E-598F-AE90-86686A45C4AC}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu/Shop/PackOpeningArea.cs">
     <Files>
+      <File FileName="Assets/Scripts/Menu/Shop/ShopManager.cs" />
       <File FileName="Assets/Scripts/Dragging/Draggable.cs" />
       <File FileName="Assets/Scripts/Dragging/DraggingActions.cs" />
       <File FileName="Assets/Scripts/Dragging/DragPackOpening.cs" />
-      <File FileName="Assets/Scripts/Menu/Shop/PackOpeningArea.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/Shop/PackOpeningArea.cs" Line="164" Column="31" />
       <File FileName="Assets/Scripts/Menu/Shop/ScriptToOpenOnePack.cs" />
+      <File FileName="Assets/Scripts/Visual/OneCardManager.cs" />
+      <File FileName="Assets/Scripts/RarityColors.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,6 +27,9 @@
                     <Node name="PackOpeningArea.cs" selected="True" />
                   </Node>
                 </Node>
+                <Node name="SO Asset Scripts" expanded="True">
+                  <Node name="CardAsset" expanded="True" />
+                </Node>
                 <Node name="Visual" expanded="True" />
               </Node>
             </Node>
@@ -29,11 +38,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1a07c504-28d7-47c0-9794-e111ee8ed24d" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eb01a2ef-06b2-42fd-9c23-695a1aecb455" />
 </Properties>

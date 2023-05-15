@@ -21,8 +21,9 @@ public class DragPackOpening : DraggingActions
 
     public override void OnStartDrag()
     {
-
-        Debug.Log("$$$$ on start drag position: " + transform.localPosition);
+        Debug.Log("+++++ DragPackOpening");
+        Debug.Log("+++++ DragPackOpening OnStartDrag transform.localPosition: " +
+            transform.localPosition);
 
         savedPosition = transform.localPosition;
         ShopManager.Instance.OpeningArea.AllowedToDragAPack = false;
@@ -40,9 +41,9 @@ public class DragPackOpening : DraggingActions
         {            
             // move the pack to the center of the pack opening area
             Vector3 targetPosition = ShopManager.Instance.OpeningArea.transform.position;
-            targetPosition.y -= 3;
 
-            Debug.Log("$$$$ on success drag target position: " +
+            Debug.Log("+++++ DragPackOpening");
+            Debug.Log("+++++ DragPackOpening OnEndDrag transform.localPosition: " +
                 targetPosition);
 
             transform.DOMove(

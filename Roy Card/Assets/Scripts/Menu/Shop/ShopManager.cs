@@ -42,11 +42,8 @@ public class ShopManager : MonoBehaviour
             int unOpenedPacks = PlayerPrefs.GetInt("UnopenedPacks");
 
             // todo: b/c of the hide screen, StartCoroutine failed
-            Debug.Log("!!!!!!!");
-            Debug.Log("!!!!!!!");
-            Debug.Log("!!!!!!!");
-            Debug.Log("!!!!!!!");
-            Debug.Log("!!!!!!!: " + unOpenedPacks);
+            Debug.Log("+++++ ShopManager");
+            Debug.Log("+++++ ShopManager unOpenedPacks: " + unOpenedPacks);
 
             StartCoroutine(
                 GivePacks(unOpenedPacks, true)
@@ -102,7 +99,8 @@ public class ShopManager : MonoBehaviour
                 PacksCreated * packPlacementOffset // offset
                 );
 
-            Debug.Log("localPositionForNewPack: " + localPositionForNewPack);
+            Debug.Log("+++++ ShopManager");
+            Debug.Log("+++++ ShopManager localPositionForNewPack: " + localPositionForNewPack);
            
             newPack.transform.localEulerAngles = new Vector3(
                 0f,

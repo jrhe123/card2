@@ -77,7 +77,10 @@ public class ScriptToOpenOnePack : MonoBehaviour
             {
                 // 2) add glow, particle system
                 // 3)
-                ShopManager.Instance.OpeningArea.ShowPackOpening(transform.position);
+                ShopManager.Instance.OpeningArea.ShowPackOpening(
+                    transform.position
+                    );
+
                 if (ShopManager.Instance.PacksCreated > 0)
                     ShopManager.Instance.PacksCreated--;
                 // 4) destroy this pack in the end of the sequence
